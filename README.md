@@ -12,3 +12,10 @@ A [Solarized](http://ethanschoonover.com/solarized) userstyle for IRCCloud.
 ## Tweaks
 
 The theme is set up for Solarized Light by default, if you want Solarized Dark then the easiest thing to do is change the color Sass variable names around, i.e. `base0` becomes `base00`, `base1` becomes `base01`, `base2` becomes `base02` and `base3` becomes `base03`.
+
+## Screenshots
+
+
+![Solarized Light](irccloud_solarized_light.png "Solarized Light")
+
+![Solarized Dark](irccloud_solarized_dark.png "Solarized Dark")

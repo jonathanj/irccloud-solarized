@@ -1,0 +1,233 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("irccloud.com") {
+
+$chat-font-family: "Consolas", "Monaco", "Source Code Pro", monospace;
+$nick-display-prefix: "<";
+$nick-display-suffix: ">";
+
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+td.nickcell a.nick,
+td.inputcell textarea,
+div.log div.messageRow,
+div.log div.me a.user {
+    font-family: $chat-font-family !important;
+}
+
+body,
+.mainContainer,
+#buffers li.connection {
+    background-color: $base3 !important;
+}
+
+#sidebar #limits,
+div.memberwrapper,
+.bufferHead {
+    background-color: $base2 !important;
+    border: none !important;
+}
+
+td.statuscell div.status h2.bufferHeading span.label {
+    color: $base01 !important;
+}
+
+.extras span.extrasBar {
+    background-color: $cyan !important;
+}
+
+#buffers span.badge,
+.extras .extrasBadge {
+    background-color: $red !important;
+    border: none !important;
+    padding: 0 0.45em !important;
+    border-radius: 1em !important;
+}
+
+.extras span.extrasDismiss {
+    background-color: $orange !important;
+}
+
+p#addNetwork a,
+#buffers h2 a.buffer {
+    font-weight: 700;
+    background-color: $base2 !important;
+    border: none !important;
+}
+
+#buffers {
+    a.buffer,
+    p.join a,
+    p.archiveToggle a {
+        color: $base1 !important;
+
+        &:hover {
+            background-color: $base2 !important;
+        }
+    }
+
+    .active {
+        a.buffer {
+            color: $base02 !important;
+        }
+
+        &.selected a.buffer,
+        &.selected a.buffer:hover {
+            color: $base3 !important;
+            background-color: $violet !important;
+        }
+    }
+
+    ul.buffers .active.unread a.buffer,
+    h2.active.unread {
+        border-color: $violet !important;
+    }
+}
+
+p#addNetwork a {
+    color: $base02 !important;
+}
+
+table.buffer {
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+div.log {
+    div.chat,
+    div.status,
+    div.notice,
+    div.groupedLines,
+    div.warning,
+    div.error,
+    div.table,
+    div.me {
+        color: $base00 !important;
+    }
+
+    div.row span a.author {
+        color: $base01 !important;
+    }
+
+    div.highlight,
+    div.status,
+    div.notice {
+        background-color: $base2 !important;
+    }
+
+    div.self {
+        background-color: transparent !important;
+
+        &.row a.author {
+            color: $base0 !important;
+        }
+    }
+
+    div.groupedJoinPart {
+        border-color: $base2 !important;
+    }
+
+    div.lastSeen hr,
+    div.bottomSeen hr,
+    div.focusSeen hr,
+    div.backlogDivider hr,
+    div.fetch hr {
+        border-color: $base1 !important;
+    }
+
+    div.lastSeen span.text,
+    div.bottomSeen span,
+    div.focusSeen span {
+        color: $base1 !important;
+        background-color: $base3 !important;
+    }
+
+    div.row.highlight a.author,
+    div.row.highlight td.nickcell a.nick {
+        color: $magenta !important;
+    }
+
+    span.date {
+        color: $base0 !important;
+    }
+}
+
+
+td.nickcell a.nick {
+    color: $base01 !important;
+}
+
+.author:before {
+    font-weight: 400;
+    content: $nick-display-prefix !important;
+}
+
+.author:after {
+    font-weight: 400;
+    content: $nick-display-suffix !important;
+}
+
+td.timecell {
+    color: $base0 !important;
+}
+
+#footer {
+    color: $base0 !important;
+}
+
+a,
+#footer a,
+#headercell a,
+div.log a {
+    color: $blue !important;
+
+    &:hover {
+        text-decoration: none !important;
+    }
+}
+
+div.nickinputwrapper,
+td.inputcell,
+td.inputcell textarea {
+    color: $base01 !important;
+    background-color: $base2 !important;
+}
+
+div.nickinputwrapper {
+    border-color: $base1 !important;
+}
+
+td.nickcell {
+    border-color: $base1 !important;
+    background: none !important;
+}
+
+div.log div.dateChange p,
+div.dateWrapper table {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5) !important;
+    background-color: $base2 !important;
+    background-image: none !important;
+    width: 95% !important;
+    margin: 0.5em auto !important;
+}
+
+div.buffermain {
+    background-color: transparent !important;
+}
+
+}

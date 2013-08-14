@@ -142,6 +142,16 @@ div.log {
 
     div.groupedJoinPart {
         border-color: $base2 !important;
+
+        &:hover,
+        &.expanded {
+            background-color: $base2 !important;
+            border-color: $base2 !important;
+        }
+    }
+
+    div.joinPartGroup.expanded div.messageRow {
+        background-color: $base3 !important;
     }
 
     div.lastSeen hr,

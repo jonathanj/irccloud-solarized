@@ -133,6 +133,10 @@ div.log {
         background-color: $base2 !important;
     }
 
+    div.warning {
+        background-color: transparentize($yellow, 0.75) !important;
+    }
+
     div.self {
         background-color: transparent !important;
 

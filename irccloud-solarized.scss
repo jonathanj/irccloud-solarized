@@ -22,10 +22,10 @@ $base3:    #002b36;
 $base2:    #073642;
 $base1:    #586e75;
 $base0:    #657b83;
-$base00:     #839496;
-$base01:     #93a1a1;
-$base02:     #eee8d5;
-$base03:     #fdf6e3;
+$base00:   #839496;
+$base01:   #93a1a1;
+$base02:   #eee8d5;
+$base03:   #fdf6e3;
 */
 
 $yellow:    #b58900;
@@ -262,6 +262,39 @@ div.dateWrapper table {
 
 div.buffermain {
     background-color: transparent !important;
+}
+
+.inputInfo {
+    background-color: $base03 !important;
+    background-image: none !important;
+    border: none !important;
+    padding: 0.25em !important;
+
+    span.hint {
+        color: $base0 !important;
+    }
+  
+    span.original {
+        color: $base0 !important;
+    }
+  
+    span.item {
+      font-weight: 700;
+      border: 1px solid transparent;
+      margin-right: 0.25em;
+    }
+  
+    span.highlight,
+    span.item:hover {
+        color: $base0 !important;
+        background-color: $base02 !important;
+        border: 1px solid $base01 !important;
+        border-radius: 0.15em;
+    }
+  
+    span.highlight a {
+        text-decoration: underline !important;;
+    }
 }
 
 }

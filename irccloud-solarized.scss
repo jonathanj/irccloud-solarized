@@ -204,14 +204,21 @@ td.nickcell a.nick {
     color: $base01 !important;
 }
 
-.author:before {
-    font-weight: 400;
-    content: $nick-display-prefix !important;
-}
+.row.type_buffer_msg {
+    .author {
+        &:after,
+        &:before {
+            font-weight: 400;
+        }
 
-.author:after {
-    font-weight: 400;
-    content: $nick-display-suffix !important;
+        &:before {
+            content: $nick-display-prefix !important;
+        }
+
+        &:after {
+            content: $nick-display-suffix !important;
+        }
+    }
 }
 
 td.timecell {
@@ -274,23 +281,23 @@ div.buffermain {
     span.hint {
         color: $base00 !important;
     }
-  
+
     span.original {
         color: $base00 !important;
     }
-  
+
     span.item {
       font-weight: 700;
       border: 1px solid transparent;
       margin-right: 0.25em;
     }
-  
+
     span.highlight,
     span.item:hover {
         background-color: $base02 !important;
         border-radius: 0.15em;
     }
-  
+
     span.highlight a {
         color: $base2 !important;
     }

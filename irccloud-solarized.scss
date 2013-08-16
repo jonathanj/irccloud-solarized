@@ -265,17 +265,18 @@ div.buffermain {
 }
 
 .inputInfo {
-    background-color: $base03 !important;
+    background-color: $base2 !important;
     background-image: none !important;
-    border: none !important;
+    box-shadow: none !important;
+    border-color: $blue !important;
     padding: 0.25em !important;
 
     span.hint {
-        color: $base0 !important;
+        color: $base00 !important;
     }
   
     span.original {
-        color: $base0 !important;
+        color: $base00 !important;
     }
   
     span.item {
@@ -286,14 +287,12 @@ div.buffermain {
   
     span.highlight,
     span.item:hover {
-        color: $base0 !important;
         background-color: $base02 !important;
-        border: 1px solid $base01 !important;
         border-radius: 0.15em;
     }
   
     span.highlight a {
-        text-decoration: underline !important;;
+        color: $base2 !important;
     }
 }
 

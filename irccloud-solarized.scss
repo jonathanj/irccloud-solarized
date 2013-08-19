@@ -3,6 +3,7 @@
 @-moz-document domain("irccloud.com") {
 
 $chat-font-family: "Consolas", "Monaco", "Source Code Pro", "Droid Sans Mono", monospace;
+$chat-font-size: 14px;
 $nick-display-prefix: "<";
 $nick-display-suffix: ">";
 
@@ -42,6 +43,7 @@ td.inputcell textarea,
 div.log div.messageRow,
 div.log div.me a.user {
     font-family: $chat-font-family !important;
+    font-size: $chat-font-size !important;
 }
 
 body,
@@ -134,6 +136,14 @@ div.log {
     div.table,
     div.me {
         color: $base00 !important;
+    }
+
+    div.monospace span.message,
+    div.notice span.message,
+    div.warning span.message,
+    div.error span.message,
+    div.groupedLines {
+        font-family: $chat-font-family !important;
     }
 
     div.row span a.author {
@@ -300,6 +310,40 @@ div.buffermain {
 
     span.highlight a {
         color: $base2 !important;
+    }
+}
+
+
+// Modes
+
+span.mode_symbol,
+span.mode_pill {
+    font-family: $chat-font-family !important;
+    font-size: $chat-font-size !important;
+}
+
+div.log div.row span,
+.inputInfo span,
+.nickcell span,
+#memberContextMenu h3 span {
+    &.mode_OWNER {
+        color: $yellow !important;
+    }
+
+    &.mode_ADMIN {
+        color: $violet !important;
+    }
+
+    &.mode_OP {
+        color: $red !important;
+    }
+
+    &.mode_HALFOP {
+        color: $orange !important;
+    }
+
+    &.mode_VOICED {
+        color: $green !important;
     }
 }
 

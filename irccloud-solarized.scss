@@ -7,7 +7,9 @@ $chat-font-size: 14px;
 $nick-display-prefix: "<";
 $nick-display-suffix: ">";
 
-/* Light */
+$dark: false;
+
+// Light
 $base03:    #002b36;
 $base02:    #073642;
 $base01:    #586e75;
@@ -17,17 +19,17 @@ $base1:     #93a1a1;
 $base2:     #eee8d5;
 $base3:     #fdf6e3;
 
-/* Dark */
-/*
-$base3:    #002b36;
-$base2:    #073642;
-$base1:    #586e75;
-$base0:    #657b83;
-$base00:   #839496;
-$base01:   #93a1a1;
-$base02:   #eee8d5;
-$base03:   #fdf6e3;
-*/
+@if $dark {
+    // Dark
+    $base3:    #002b36;
+    $base2:    #073642;
+    $base1:    #586e75;
+    $base0:    #657b83;
+    $base00:   #839496;
+    $base01:   #93a1a1;
+    $base02:   #eee8d5;
+    $base03:   #fdf6e3;
+}
 
 $yellow:    #b58900;
 $orange:    #cb4b16;
@@ -344,6 +346,53 @@ div.log div.row span,
 
     &.mode_VOICED {
         color: $green !important;
+    }
+}
+
+
+// Nick colours
+
+@mixin nick-color($name, $color) {
+    div.log div.row span a.#{$name},
+    div.log div.row span a.hover.#{$name}:hover,
+    div.log div.row span a.hover.#{$name},
+    ul.memberList li.hover a.#{$name},
+    ul.memberList li a.#{$name}:hover {
+      color: $color !important;
+  }
+}
+
+.nick-colors {
+    @if $dark {
+        @include nick-color(c0,  $magenta);               // Hot Pink
+        @include nick-color(c1,  darken($orange, 10%));   // Burnt Orange
+        @include nick-color(c2,  $red);                   // Red
+        @include nick-color(c3,  $orange);                // Orange
+        @include nick-color(c4,  darken(red, 10%));       // Maroon
+        @include nick-color(c5,  lighten($magenta, 10%)); // Pink
+        @include nick-color(c6,  lighten($violet, 10%));  // Lavender
+        @include nick-color(c7,  $violet);                // Purple
+        @include nick-color(c8,  lighten($blue, 10%));    // Navy
+        @include nick-color(c9,  $blue);                  // Royal Blue
+        @include nick-color(c10, $cyan);                  // Teal
+        @include nick-color(c11, $green);                 // Green
+        @include nick-color(c12, lighten($green, 5%));    // Green2
+        @include nick-color(c13, darken($cyan, 10%));     // Teal2
+    } @else {
+        @include nick-color(c0,  $magenta);               // Hot Pink
+        @include nick-color(c1,  darken($orange, 10%));   // Burnt Orange
+        @include nick-color(c2,  $red);                   // Red
+        @include nick-color(c3,  $orange);                // Orange
+        @include nick-color(c4,  darken(red, 10%));       // Maroon
+        @include nick-color(c5,  lighten($magenta, 10%)); // Pink
+        @include nick-color(c6,  lighten($violet, 10%));  // Lavender
+        @include nick-color(c7,  $violet);                // Purple
+        @include nick-color(c8,  lighten($blue, 10%));    // Navy
+        @include nick-color(c9,  $blue);                  // Royal Blue
+        @include nick-color(c10, $cyan);                  // Teal
+        @include nick-color(c11, $green);                 // Green
+        @include nick-color(c12, darken($green, 3.5%));   // Green2
+        @include nick-color(c13, darken($cyan, 10%));     // Teal2
     }
 }
 

@@ -1,6 +1,6 @@
 @namespace url(http://www.w3.org/1999/xhtml);
 
-//@-moz-document domain("irccloud.com") {
+@-moz-document domain("irccloud.com") {
 
 $base03:    #002b36;
 $base02:    #073642;
@@ -554,18 +554,15 @@ body.theme-ash div.log div.status {
 }
 
 body.theme-ash div.log div.self {
-    box-shadow: 0 0 2px $base1;
     background-color: $base02
 }
 
 body.theme-ash div.log div.notice {
-    box-shadow: 0 0 2px $base02;
     background-color: $base02
 }
 
 body.theme-ash div.log div.groupedLines,
 body.theme-ash div.log div.highlight {
-    box-shadow: 0 0 2px $base01;
     background-color: $base02
 }
 
@@ -1652,4 +1649,4 @@ span.mode_VOICED {
     color: $light-green;
 }
 
-//}
+}

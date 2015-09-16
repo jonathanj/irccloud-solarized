@@ -557,13 +557,31 @@ body.theme-ash div.log div.self {
     background-color: $base02
 }
 
+///body.theme-ash div.log div.self a.author {
+///    border: 1px solid $base01;
+///    border-radius: 3px;
+///    padding: 0 3px;
+///    margin: -1px -4px;
+///}
+
 body.theme-ash div.log div.notice {
     background-color: $base02
+}
+
+body.theme-ash div.log div.notice a.author {
+    font-weight: 700 !important;
 }
 
 body.theme-ash div.log div.groupedLines,
 body.theme-ash div.log div.highlight {
     background-color: $base02
+}
+
+body.theme-ash div.log div.highlight a.author {
+    background: rgba($magenta, 0.85);
+    border-radius: 3px;
+    padding: 3px;
+    margin: -3px;
 }
 
 body.theme-ash div.log div.row.pendingOut {

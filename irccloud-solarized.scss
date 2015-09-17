@@ -488,8 +488,8 @@ body.theme-ash .inputcell textarea,
 body.theme-ash div.shim {
     color: $base1;
     background-color: $base02;
-    font-weight: 300;
-    letter-spacing: .2px
+    ///font-weight: 300;
+    ///letter-spacing: .2px
 }
 
 body.theme-ash div.log {
@@ -550,7 +550,7 @@ body.theme-ash div.log span.message a.user:hover {
 }
 
 body.theme-ash div.log div.status {
-    background-color: #2b2b2b
+    background-color: $base03
 }
 
 body.theme-ash div.log div.self {
